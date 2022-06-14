@@ -1,4 +1,11 @@
 #include "main.h"
+/**
+ * _prerror - helper to error function
+ * @argv: command line argument
+ * @c: command line count of arguments
+ * @cmd: command
+ * Return: void
+ */
 void _prerror(char **argv, int c, char **cmd)
 {
 	char *er = _itoa(c);
@@ -13,7 +20,12 @@ void _prerror(char **argv, int c, char **cmd)
 	PRINTER("\n");
 	free(er);
 }
-
+/**
+ * print_error - prints error
+ * @input: input character
+ * @counter: counter
+ * @argv: command line argument
+ */
 void print_error(char *input, int counter, char **argv)
 {
 	char *er;

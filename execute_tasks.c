@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * handle_builtin - handles commands for builtins
+ * @cmd: command needed
+ * @er: int valued
+ * Return: -1 if failed, command value if true
+ */
 int handle_builtin(char **cmd, int er)
 {
 	 bul_t bil[] = {
@@ -22,6 +28,14 @@ int handle_builtin(char **cmd, int er)
 	return (-1);
 }
 
+/**
+ * check_cmd - checks the command
+ * @cmd: command to be checked
+ * @input: input value
+ * @c: count of inputs
+ * @argv: command line arguments
+ * Return: int
+ */
 int check_cmd(char **cmd, char *input, int c, char **argv)
 {
 	int status;
@@ -59,6 +73,11 @@ int check_cmd(char **cmd, char *input, int c, char **argv)
 	return (0);
 }
 
+/**
+ * signal_to_handel - sends signal handles
+ * @sig: int value of signature
+ * Return: void
+ */
 void signal_to_handel(int sig)
 {
 	if (sig == SIGINT)

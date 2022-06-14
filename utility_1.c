@@ -1,5 +1,10 @@
 #include "main.h"
-
+/**
+ * history_dis - manages the creation of history
+ * @c: unused string
+ * @s: unused int
+ * Return: 0 if sucessful, otherwise if fail
+ */
 int history_dis(__attribute__((unused))char **c, __attribute__((unused))int s)
 {
 	char *filename = ".simple_shell_history";
@@ -29,7 +34,11 @@ int history_dis(__attribute__((unused))char **c, __attribute__((unused))int s)
 	fclose(fp);
 	return (0);
 }
-
+/**
+ * print_echo - prints out echo
+ * @cmd: command to print
+ * Return: number of characters printed
+ */
 int print_echo(char **cmd)
 {
 	pid_t pid;

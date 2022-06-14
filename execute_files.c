@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * read_file - reads a file
+ * @filename: string value of filename
+ * @argv: command line arguments
+ * Return: void
+ */
 void read_file(char *filename, char **argv)
 {
 	FILE *fp;
@@ -22,7 +28,13 @@ void read_file(char *filename, char **argv)
 	fclose(fp);
 	exit(0);
 }
-
+/**
+ * treat_file - performs action on file
+ * @line: line
+ * @counter: counts line
+ * @fp: file pointer
+ * @argv: commandline arguments
+ */
 void treat_file(char *line, int counter, FILE *fp, char **argv)
 {
 	char **cmd;
@@ -45,7 +57,13 @@ void treat_file(char *line, int counter, FILE *fp, char **argv)
 			free(cmd);
 		}
 }
-
+/**
+ * exit_bul_for_file - exit boolean funct for file
+ * @cmd: command to exit function
+ * @line: line character
+ * @fd: file descriptor
+ * Return: void
+ */
 void exit_bul_for_file(char **cmd, char *line, FILE *fd)
 {
 	int statue, i = 0;

@@ -1,5 +1,11 @@
 #include "main.h"
-
+/**
+ * _realloc - works as standard realloc
+ * @ptr: pointer
+ * @old_size: old memory size
+ * @new_size: new memory size
+ * Return: void
+ */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *result;
@@ -27,6 +33,12 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	return (result);
 
 }
+/**
+ * free_all - frees all command
+ * @cmd: command double pointer to be freed
+ * @line: char pointer
+ * Return: void
+ */
 void free_all(char **cmd, char *line)
 {
 	free(cmd);
@@ -34,6 +46,13 @@ void free_all(char **cmd, char *line)
 	cmd = NULL;
 	line = NULL;
 }
+/**
+ *_memcpy - copies memory from src to dest
+ * @dest: destination pointer
+ * @src: source pointer
+ * @n: size of string
+ * Return: pointer to destination
+ */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
@@ -44,6 +63,13 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
+/**
+ * fill_an_array - fill a given array of length
+ * @a: void pointer to temporary hold value
+ * @el: number of elements
+ * @len: length of pointer
+ * Return: void pointer to character
+ */
 void *fill_an_array(void *a, int el, unsigned int len)
 {
 	char *p = a;
@@ -57,6 +83,11 @@ void *fill_an_array(void *a, int el, unsigned int len)
 	}
 	return (a);
 }
+/**
+ * _calloc - act like standard calloc
+ * @size: size of memory desired
+ * Return: void pointer to memory allocated
+ */
 void *_calloc(unsigned int size)
 {
 	char *a;

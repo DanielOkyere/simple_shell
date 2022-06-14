@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+ * history - function that creates a hidden history file
+ * @input: pointer to input character
+ * Return: -1 if unsuccessful, 1 if successful
+ */
 int history(char *input)
 {
 	char *filename = ".simple_shell_history";
@@ -20,7 +25,11 @@ int history(char *input)
 	}
 	return (1);
 }
-
+/**
+ * free_env - free function
+ * @env: double pointer to char
+ * Return: void
+ */
 void free_env(char **env)
 {
 	int i;

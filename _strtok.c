@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * _strtok - string tokenisation funct
+ * @str: string to check
+ * @delim: delimiter
+ * Return: char
+ */
 char *_strtok(char *str, const char *delim)
 {
 	static char *ts;
@@ -38,7 +44,12 @@ char *_strtok(char *str, const char *delim)
 	}
 	return (ts);
 }
-
+/**
+ * check_delim - checks delimiter
+ * @c: delimiter character
+ * @str: string to obtain delimetre
+ * Return: int value
+ */
 unsigned int check_delim(char c, const char *str)
 {
 	unsigned int i;

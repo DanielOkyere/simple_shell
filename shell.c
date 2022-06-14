@@ -1,5 +1,10 @@
 #include "main.h"
-
+/**
+ * main - main shell function
+ * @argc: count of commandline value
+ * @argv: command line arguments
+ * Return: 0 if successful, otherwise if failed
+ */
 int main(__attribute__((unused)) int argc, char **argv)
 {
 	char *input, **cmd;
@@ -39,7 +44,11 @@ int main(__attribute__((unused)) int argc, char **argv)
 	}
 	return (statue);
 }
-
+/**
+ * check_builtin - checks the builtin function for cmd
+ * @cmd: command to check buit in function
+ * Return: -1 if fail, 0 if successful
+ */
 int check_builtin(char **cmd)
 {
 	bul_t fun[] = {
@@ -63,7 +72,11 @@ int check_builtin(char **cmd)
 	}
 	return (-1);
 }
-
+/**
+ * creat_envi - creates environment
+ * @envi: double pointer to environment character
+ * Return: void
+ */
 void creat_envi(char **envi)
 {
 	int i;

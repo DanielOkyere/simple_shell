@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * _strcpy - mimics standard string cpy
+ * @dest: destination pointer
+ * @src: src pointer
+ * Return: copy of src in dest
+ */
 char *_strcpy(char *dest, char *src)
 {
 int i;
@@ -12,7 +18,12 @@ i = 0;
 dest[i] = '\0';
 return (dest);
 }
-
+/**
+ * _strcat - mimics standard string cat
+ * @dest: destination pointer
+ * @src: source pointer
+ * Return: destination pointer
+ */
 char *_strcat(char *dest, char *src)
 {
 	char *s = dest;
@@ -31,21 +42,29 @@ char *_strcat(char *dest, char *src)
 	*dest = '\0';
 	return (s);
 }
-
+/**
+ * _strchr - searches for character in striing
+ * @s: string to search character `c`
+ * @c: character to be searched for
+ * Return: pointer to character
+ */
 char *_strchr(char *s, char c)
 {
-
-	do		{
-
+	do {
 		if (*s == c)
-			{
+		{
 			break;
-			}
-		}	while (*s++);
-
-return (s);
+		}
+	} while (*s++);
+	return (s);
 }
-
+/**
+ * _strncmp - mimics the standard string comparision
+ * @s1: string 1
+ * @s2: string 2
+ * @n: size of strings
+ * Return: 0 if same, 1 if not same
+ */
 int _strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t i;
@@ -61,7 +80,11 @@ int _strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
+/**
+ * _strdup -mimics the standard duplicate string
+ * @str: pointer to string
+ * Return: pointer to str
+ */
 char *_strdup(char *str)
 {
 	size_t len, i;

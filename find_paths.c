@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+ * path_cmd - finds the path
+ * @cmd: command string
+ * Return: 1 if fail, value if successful
+ */
 int path_cmd(char **cmd)
 {
 	char *path, *value, *cmd_path;
@@ -23,7 +28,12 @@ int path_cmd(char **cmd)
 
 	return (1);
 }
-
+/**
+ * build - build function
+ * @token: token character
+ * @value: value character
+ * Return: character pointer
+ */
 char *build(char *token, char *value)
 {
 	char *cmd;
@@ -44,7 +54,11 @@ char *build(char *token, char *value)
 
 	return (cmd);
 }
-
+/**
+ * _getenv - gets the env variable
+ * @name: name of the environment variable
+ * Return: pointer to character
+ */
 char *_getenv(char *name)
 {
 	size_t nl, vl;

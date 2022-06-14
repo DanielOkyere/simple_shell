@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * _strcmp - compares 2 strings, s2, to s1
+ * @s1: string 1 to be compared
+ * @s2: string compared to s1
+ * Return: 1 if failed, 0 if true
+ */
 int _strcmp(char *s1, char *s2)
 {
 int cmp = 0, i, len1, len2;
@@ -21,19 +27,27 @@ len2 = _strlen(s2);
 	}
 	return (cmp);
 }
-
+/**
+ * _isalpha - checks for character if alpha
+ * @c: character to check
+ * Return: 1 if true, 0 if false
+ */
 int _isalpha(int c)
 {
-if (((c >= 97) && (c <= 122)) || ((c >= 65) && (c <= 90)))
-{
-return (1);
+	if (((c >= 97) && (c <= 122)) || ((c >= 65) && (c <= 90)))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
-else
-{
-return (0);
-}
-}
-
+/**
+ * _itoa - checks to print out number character
+ * @n: number
+ * Return: character pointer of number
+ */
 char *_itoa(unsigned int n)
 {
 	int len = 0, i = 0;
@@ -55,7 +69,12 @@ char *_itoa(unsigned int n)
 	s[i + 1] = '\0';
 	return (s);
 }
-
+/**
+ * array_rev - reverses an array of given length
+ * @arr: pointer to array
+ * @len: length of given array
+ * Return: void
+ */
 void array_rev(char *arr, int len)
 {
 	int i;
@@ -68,7 +87,11 @@ void array_rev(char *arr, int len)
 		arr[(len - 1) - i] = tmp;
 	}
 }
-
+/**
+ * intlen - determines length of integer
+ * @num: number
+ * Return: length of integer
+ */
 int intlen(int num)
 {
 	int len = 0;

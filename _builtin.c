@@ -1,4 +1,11 @@
 #include "main.h"
+/**
+ * exit_bul - exit bul
+ * @cmd: command to be worked on
+ * @input: input needed
+ * @argv: command line argument
+ * @c: c int
+ */
 void  exit_bul(char **cmd, char *input, char **argv, int c)
 {
 	int statue, i = 0;
@@ -26,6 +33,12 @@ void  exit_bul(char **cmd, char *input, char **argv, int c)
 	}
 }
 
+/**
+ * change_dir - change directory
+ * @cmd: command
+ * @er: integer
+ * Return: int value
+ */
 int change_dir(char **cmd, __attribute__((unused))int er)
 {
 	int value = -1;
@@ -53,7 +66,12 @@ int change_dir(char **cmd, __attribute__((unused))int er)
 	}
 	return (0);
 }
-
+/**
+ * dis_env - dis env
+ * @cmd: double pointer to cmd
+ * @er: int err
+ * Return: int value
+ */
 int dis_env(__attribute__((unused)) char **cmd, __attribute__((unused)) int er)
 {
 size_t i;
@@ -67,7 +85,12 @@ size_t i;
 	}
 	return (0);
 }
-
+/**
+ * display_help - displays help for shell
+ * @cmd: command to be worked on
+ * @er: int value
+ * Return: int value
+ */
 int display_help(char **cmd, __attribute__((unused))int er)
 {
 	int fd, fw, rd = 1;
@@ -91,7 +114,12 @@ int display_help(char **cmd, __attribute__((unused))int er)
 	_putchar('\n');
 	return (0);
 }
-
+/**
+ * echo_bul - ehco's bull value
+ * @cmd: command value
+ * @st: int value
+ * Return: int value
+ */
 int echo_bul(char **cmd, int st)
 {
 	char *path;

@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * print_number - prints decimals
+ * @n: number in base 10
+ * Return: void
+ */
 void print_number(unsigned int n)
 {
 	unsigned int x = n;
@@ -9,7 +13,11 @@ void print_number(unsigned int n)
 
 	_putchar(x % 10 + '0');
 }
-
+/**
+ * print_number_in - prints inverse of number
+ * @n: number
+ * Return: void
+ */
 void print_number_in(int n)
 {
 	unsigned int x = n;
@@ -24,7 +32,9 @@ void print_number_in(int n)
 
 	_putchar(x % 10 + '0');
 }
-
+/**
+ * prompt - prints out prompt value
+ */
 void prompt(void)
 {
 	PRINTER("$ ");
